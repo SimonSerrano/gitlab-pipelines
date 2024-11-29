@@ -1,0 +1,27 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "start": "lerna run start --stream --parallel",
+    "build": "lerna run build --stream --parallel",
+    "graph": "npx nx graph",
+    "lint": "eslint packages/**/src/**/*.ts[x]",
+    "bootstrap": "lerna exec npm install",
+    "bootstrap:ci": "lerna exec npm ci",
+    "docker:build": "docker build -t busit/pipelines .",
+    "docker:start": "docker run --name pipelines -p 3000:3000 busit/pipelines:latest"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "eslint": "^8.34.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "lerna": "^6.4.1",
+    "prettier": "^2.8.4"
+  }
+}

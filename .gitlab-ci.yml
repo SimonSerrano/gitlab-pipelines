@@ -1,0 +1,10 @@
+
+
+
+build:
+  image: docker:20.10.16
+  stage: build
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker build -t $CI_REGISTRY/sserrano/pipelines/master:latest .
+    - docker push $CI_REGISTRY/sserrano/pipelines/master:latest
