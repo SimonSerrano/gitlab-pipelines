@@ -88,6 +88,8 @@ I created this Gitlab CI pipeline dashboard to monitor the pipelines on a TV or 
 
 Of course, this dashboard may not suit your needs if you itend to monitor a lot of projects, but it will be very useful for smaller teams with a few active projects. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
 
+> This project has been developed for an enterprise use on my spare time and automating tests is not properly done yet.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
